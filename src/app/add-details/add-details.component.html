@@ -1,0 +1,55 @@
+<div class="flex justify-center mt-6">
+    <button (click)="openModal()" class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-700">
+      Add Application
+    </button>
+  </div>
+  
+  <!-- Modal -->
+  <div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white p-8 rounded-md shadow-md w-full max-w-lg">
+      <h2 class="text-2xl font-bold mb-4 text-center">Add Application</h2>
+  
+      <form>
+        <!-- Application Name -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="appName">Application Name</label>
+          <input id="appName" name="appName"  required type="text" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Application Name">
+        </div>
+  
+        <!-- App URL -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="appUrl">App URL</label>
+          <input id="appUrl" name="appUrl"  required type="url" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="App URL">
+        </div>
+  
+        <!-- App Domain -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="appDomain">App Domain</label>
+          <input id="appDomain" name="appDomain"  required type="text" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="App Domain">
+        </div>
+  
+        <!-- Call Back URL -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="callbackUrl">Call Back URL</label>
+          <input id="callbackUrl" name="callbackUrl" required type="url" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Call Back URL">
+        </div>
+  
+        <!-- System ID -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="systemId">System ID</label>
+          <input id="systemId" name="systemId"  required type="text" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="System ID">
+        </div>
+  
+        <!-- Buttons -->
+        <div class="flex justify-between">
+          <button type="submit" class="bg-blue-900 text-white py-2 px-6 rounded hover:bg-blue-700" >
+            Submit
+          </button>
+          <button type="button" (click)="closeModal()" class="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-500">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
